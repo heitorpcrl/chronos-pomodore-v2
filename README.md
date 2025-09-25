@@ -1,65 +1,65 @@
-<<<<<<< HEAD
+## Chronos Pomodoro v2
 
-# chronos-pomodore-v2
+Landing page interativa sobre a técnica de estudo Pomodoro, construída com
+React, TypeScript e Vite. O projeto oferece um timer dedicado aos ciclos de foco
+e descanso, toasts para feedback rápido e avisos sonoros para ajudar na cadência
+dos estudos.
 
-# react based page
+### Sobre o Projeto
 
-# React + TypeScript + Vite
+O objetivo do Chronos Pomodoro v2 é facilitar a prática da técnica de Pomodoro
+por meio de uma interface simples, responsiva e agradável. A página permite
+iniciar/pausar o timer, receber notificações visuais (toasts) e alertas sonoros
+ao término de cada ciclo, promovendo foco e um ritmo de estudos saudável.
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+- **Timer de Pomodoro**: ciclos configuráveis de foco e descanso.
+- **Toasts/Feedback**: mensagens rápidas para ações e mudanças de estado.
+- **Alertas Sonoros**: avisos ao final dos ciclos para não depender apenas da
+  tela.
+- **UI Responsiva**: experiência consistente em diferentes tamanhos de tela.
 
-Currently, two official plugins are available:
+### Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** 19 + **TypeScript**
+- **Vite** (dev server e build)
+- **ESLint** e **TypeScript-ESLint** (qualidade de código)
 
-## React Compiler
+### Ferramentas e Extensões
 
-The React Compiler is currently not compatible with SWC. See
-[this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for
-tracking the progress.
+- **Prettier**: formatação consistente do código
+  - Extensão VS Code: `esbenp.prettier-vscode`
+  - Configuração: `.prettierrc.json` (largura de linha 80, aspas simples, ponto
+    e vírgula, etc.)
+- **ESLint**: linting para JS/TS e React
+  - Configuração: `eslint.config.js` (baseado em `@eslint/js`,
+    `typescript-eslint`, `eslint-plugin-react-hooks`,
+    `eslint-plugin-react-refresh`)
+  - Ação ao salvar: correções via `source.fixAll.eslint` (configurado em
+    `.vscode/settings.json`)
+- **VS Code** (recomendações de ambiente)
+  - Formatação padrão com Prettier e formatOnSave habilitado
+  - Tamanhos de fonte e ajustes de interface para foco (breadcrumbs, activity
+    bar oculta, etc.)
 
-## Expanding the ESLint configuration
+### Requisitos
 
-If you are developing a production application, we recommend updating the
-configuration to enable type-aware lint rules:
+- Node.js 18+ (recomendado LTS)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Scripts
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `npm run dev`: inicia o ambiente de desenvolvimento com HMR.
+- `npm run build`: gera o build de produção.
+- `npm run preview`: serve o build gerado localmente.
+- `npm run lint`: roda o linter no projeto.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+Para iniciar rapidamente em desenvolvimento:
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install
-[eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
-and
-[eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
-for React-specific lint rules:
+Para gerar e visualizar o build de produção:
 
 ```bash
 npm run build
