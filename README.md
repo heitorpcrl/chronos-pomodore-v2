@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-# chronos-pomodore-v2
-react based page
+
+# Chronos-pomodore-v2
+React based page
 =======
 # React + TypeScript + Vite
 
