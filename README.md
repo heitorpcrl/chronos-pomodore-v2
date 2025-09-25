@@ -66,7 +66,7 @@ npm run build
 npm run preview
 ```
 
-### Estrutura Básica
+### 📂 Estrutura Básica 📂
 
 - `src/`: código-fonte da aplicação (componentes React, estilos e assets).
 - `public/`: arquivos públicos estáticos.
