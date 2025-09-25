@@ -1,78 +1,66 @@
-<<<<<<< HEAD
-# chronos-pomodore-v2
-react based page
-=======
-# React + TypeScript + Vite
+## Chronos Pomodoro v2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page interativa sobre a técnica de estudo Pomodoro, construída com
+React, TypeScript e Vite. O projeto oferece um timer dedicado aos ciclos de foco
+e descanso, toasts para feedback rápido e avisos sonoros para ajudar na cadência
+dos estudos.
 
-Currently, two official plugins are available:
+### Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O objetivo do Chronos Pomodoro v2 é facilitar a prática da técnica de Pomodoro
+por meio de uma interface simples, responsiva e agradável. A página permite
+iniciar/pausar o timer, receber notificações visuais (toasts) e alertas sonoros
+ao término de cada ciclo, promovendo foco e um ritmo de estudos saudável.
 
-## React Compiler
+- **Timer de Pomodoro**: ciclos configuráveis de foco e descanso.
+- **Toasts/Feedback**: mensagens rápidas para ações e mudanças de estado.
+- **Alertas Sonoros**: avisos ao final dos ciclos para não depender apenas da
+  tela.
+- **UI Responsiva**: experiência consistente em diferentes tamanhos de tela.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Tecnologias
 
-## Expanding the ESLint configuration
+- **React** 19 + **TypeScript**
+- **Vite** (dev server e build)
+- **ESLint** e **TypeScript-ESLint** (qualidade de código)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Requisitos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+ (recomendado LTS)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Scripts
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `npm run dev`: inicia o ambiente de desenvolvimento com HMR.
+- `npm run build`: gera o build de produção.
+- `npm run preview`: serve o build gerado localmente.
+- `npm run lint`: roda o linter no projeto.
+
+Para iniciar rapidamente em desenvolvimento:
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Para gerar e visualizar o build de produção:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
->>>>>>> ec55561 (feat: Added initial React + Vite aplication files.)
+
+### Estrutura Básica
+
+- `src/`: código-fonte da aplicação (componentes React, estilos e assets).
+- `public/`: arquivos públicos estáticos.
+- `index.html`: entrada da aplicação Vite.
+
+### Contribuição
+
+Sinta-se à vontade para abrir issues e enviar PRs com melhorias, correções ou
+novas ideias de UI/UX que melhorem a experiência de estudo.
+
+### Licença
+
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE (se
+houver) para mais detalhes.
