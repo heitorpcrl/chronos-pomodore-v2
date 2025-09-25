@@ -1,48 +1,65 @@
-## Chronos Pomodoro v2
+<<<<<<< HEAD
 
-Landing page interativa sobre a técnica de estudo Pomodoro, construída com
-React, TypeScript e Vite. O projeto oferece um timer dedicado aos ciclos de foco
-e descanso, toasts para feedback rápido e avisos sonoros para ajudar na cadência
-dos estudos.
+# chronos-pomodore-v2
 
-### Sobre o Projeto
+# react based page
 
-O objetivo do Chronos Pomodoro v2 é facilitar a prática da técnica de Pomodoro
-por meio de uma interface simples, responsiva e agradável. A página permite
-iniciar/pausar o timer, receber notificações visuais (toasts) e alertas sonoros
-ao término de cada ciclo, promovendo foco e um ritmo de estudos saudável.
+# React + TypeScript + Vite
 
-- **Timer de Pomodoro**: ciclos configuráveis de foco e descanso.
-- **Toasts/Feedback**: mensagens rápidas para ações e mudanças de estado.
-- **Alertas Sonoros**: avisos ao final dos ciclos para não depender apenas da
-  tela.
-- **UI Responsiva**: experiência consistente em diferentes tamanhos de tela.
+This template provides a minimal setup to get React working in Vite with HMR and
+some ESLint rules.
 
-### Tecnologias
+Currently, two official plugins are available:
 
-- **React** 19 + **TypeScript**
-- **Vite** (dev server e build)
-- **ESLint** e **TypeScript-ESLint** (qualidade de código)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
+  uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
+  uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Requisitos
+## React Compiler
 
-- Node.js 18+ (recomendado LTS)
+The React Compiler is currently not compatible with SWC. See
+[this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for
+tracking the progress.
 
-### Scripts
+## Expanding the ESLint configuration
 
-- `npm run dev`: inicia o ambiente de desenvolvimento com HMR.
-- `npm run build`: gera o build de produção.
-- `npm run preview`: serve o build gerado localmente.
-- `npm run lint`: roda o linter no projeto.
+If you are developing a production application, we recommend updating the
+configuration to enable type-aware lint rules:
 
-Para iniciar rapidamente em desenvolvimento:
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-```bash
-npm install
-npm run dev
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+]);
 ```
 
-Para gerar e visualizar o build de produção:
+You can also install
+[eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
+and
+[eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
+for React-specific lint rules:
 
 ```bash
 npm run build
