@@ -1,4 +1,4 @@
-## Chronos Pomodoro v2
+## Chronos Pomodoro v2 (Em desenvolvimento...)
 
 Landing page interativa sobre a técnica de estudo Pomodoro, construída com
 React, TypeScript e Vite. O projeto oferece um timer dedicado aos ciclos de foco
