@@ -1,11 +1,11 @@
-## Chronos Pomodoro v2
+## 🍃 Chronos Pomodoro v2 🍃 (Em desenvolvimento...)
 
 Landing page interativa sobre a técnica de estudo Pomodoro, construída com
 React, TypeScript e Vite. O projeto oferece um timer dedicado aos ciclos de foco
 e descanso, toasts para feedback rápido e avisos sonoros para ajudar na cadência
 dos estudos.
 
-### Sobre o Projeto
+### 🔋 Sobre o Projeto 🔋
 
 O objetivo do Chronos Pomodoro v2 é facilitar a prática da técnica de Pomodoro
 por meio de uma interface simples, responsiva e agradável. A página permite
@@ -18,13 +18,13 @@ ao término de cada ciclo, promovendo foco e um ritmo de estudos saudável.
   tela.
 - **UI Responsiva**: experiência consistente em diferentes tamanhos de tela.
 
-### Tecnologias
+### 🔌 Tecnologias🔌
 
 - **React** 19 + **TypeScript**
 - **Vite** (dev server e build)
 - **ESLint** e **TypeScript-ESLint** (qualidade de código)
 
-### Ferramentas e Extensões
+### 🧩 Ferramentas e Extensões 🧩
 
 - **Prettier**: formatação consistente do código
   - Extensão VS Code: `esbenp.prettier-vscode`
@@ -41,11 +41,11 @@ ao término de cada ciclo, promovendo foco e um ritmo de estudos saudável.
   - Tamanhos de fonte e ajustes de interface para foco (breadcrumbs, activity
     bar oculta, etc.)
 
-### Requisitos
+### 🧪 Requisitos 🧪
 
-- Node.js 18+ (recomendado LTS)
+- Node.js 18+ (LTS)
 
-### Scripts
+### ⛓️ Scripts ⛓️
 
 - `npm run dev`: inicia o ambiente de desenvolvimento com HMR.
 - `npm run build`: gera o build de produção.
@@ -66,7 +66,7 @@ npm run build
 npm run preview
 ```
 
-### Estrutura Básica
+### 📂 Estrutura Básica 📂
 
 - `src/`: código-fonte da aplicação (componentes React, estilos e assets).
 - `public/`: arquivos públicos estáticos.
