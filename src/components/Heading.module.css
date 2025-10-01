@@ -1,0 +1,35 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary) 0%,
+    var(--primary) 80%,
+    var(--secondary) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: linear-gradient(to right, var(--secondary), var(--primary));
+  background-size: 200% 150%;
+  background-repeat: repeat;
+  padding: 10px;
+  border-radius: 10px;
+  /*border-style: inset;*/
+  animation: right-to-left-gradient 7s linear infinite;
+}
+
+@keyframes right-to-left-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

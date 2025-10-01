@@ -1,13 +1,16 @@
-import './App.css';
+import { Heading } from './components/Heading';
+import { Body } from './components/Body';
+import { Button } from './components/Button';
+
+import './styles/theme.css';
+import './styles/global.css';
 
 export function App() {
   return (
-    <div>
-      <h1>Olá, mundo!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      </p>
-      <button>Submeter</button>
-    </div>
+    <>
+      <Heading />
+      <Body />
+      <Button />
+    </>
   );
 }
