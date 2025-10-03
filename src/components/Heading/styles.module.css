@@ -1,10 +1,12 @@
 .heading {
+  border-width: 7.5px;
+  margin: 3.2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 2rem;
+  font-size: 4.5rem;
   font-weight: 600;
   color: transparent;
   background-image: linear-gradient(
@@ -21,7 +23,7 @@
   background-repeat: repeat;
   padding: 10px;
   border-radius: 10px;
-  /*border-style: inset;*/
+
   animation: right-to-left-gradient 7s linear infinite;
 }
 

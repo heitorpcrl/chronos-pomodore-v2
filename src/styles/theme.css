@@ -1,4 +1,9 @@
 :root {
   --primary: black;
   --secondary: white;
+
+  --warning: yellow;
+  --success: rgb(0, 192, 0);
+  --error: red;
+  --info: rgb(0, 0, 197);
 }

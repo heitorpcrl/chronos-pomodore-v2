@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.logolink {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+  text-decoration: none;
+  gap: 3.2rem;
+  color: var(--secondary);
+}
+
+.logolink svg {
+  width: 6.4rem;
+  height: 6.4rem;
+}

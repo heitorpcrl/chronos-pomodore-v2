@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.menulink {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--secondary);
+  background: linear-gradient(
+    to right,
+    rgba(42, 42, 42, 0.6),
+    rgba(206, 206, 206, 0.6)
+  );
+  transition: all 0.2s ease-in-out;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.menulink svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
