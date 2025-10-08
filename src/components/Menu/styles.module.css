@@ -25,4 +25,25 @@
 .menulink svg {
   width: 2.6rem;
   height: 2.6rem;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+/* Glow base discreto nos ícones */
+.menulink svg {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.25));
+}
+
+/* Intensifica o brilho e dá leve movimento no hover/focus */
+.menulink:hover svg,
+.menulink:focus-visible svg {
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+}
+
+/* Halo no container para reforçar o efeito */
+.menulink:hover,
+.menulink:focus-visible {
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.25),
+    inset 0 0 8px rgba(255, 255, 255, 0.15);
 }
