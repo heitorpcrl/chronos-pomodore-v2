@@ -1,0 +1,66 @@
+.button {
+  color: var(--secondary);
+  border: inset;
+  background: linear-gradient(
+    to right,
+    rgba(85, 85, 85, 0.6),
+    rgba(218, 218, 218, 0.6)
+  );
+  border-radius: 0.8rem;
+  width: 18rem;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.button svg {
+  width: 2.8rem;
+  height: 3rem;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.25));
+}
+
+.button:hover svg,
+.button:focus-visible svg {
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+}
+
+.button:hover,
+.button:focus-visible {
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.25),
+    inset 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.red {
+  background: linear-gradient(
+    to right,
+    rgba(85, 85, 85, 0.6),
+    rgba(218, 218, 218, 0.6)
+  );
+  color: var(--secondary);
+  transition: transform 0.5s ease-in-out, box-shadow 1s ease-in-out;
+  display: flex;
+  gap: 3.6rem;
+}
+
+.green {
+  background: linear-gradient(
+    to left,
+    rgba(85, 85, 85, 0.6),
+    rgba(218, 218, 218, 0.6)
+  );
+  color: var(--primary);
+  transition: transform 0.5s ease-in-out, box-shadow 1s ease-in-out;
+  display: flex;
+  gap: 3.6rem;
+}
+
+.red:hover,
+.red:focus-visible,
+.green:hover,
+.green:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+}

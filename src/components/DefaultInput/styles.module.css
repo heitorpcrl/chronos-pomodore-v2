@@ -8,11 +8,29 @@
   color: var(--secondary);
 
   border: 0.2rem solid var(--secondary);
+  border-bottom: 0.2rem solid gray;
+  transition: all 1s ease-in-out;
+}
+
+.input:focus {
+  border: 0.2rem solid var(--secondary);
+  border-radius: 0.2rem;
+}
+
+.input::placeholder {
+  color: gray;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.input:disabled {
+  border-bottom: 0.2rem solid var(--disabled);
+  color: var(--text-muted);
 }
 
 .labelText {
   justify-content: center;
   display: flex;
   text-align: center;
-  gap: 2.4rem;
+  margin: 1.6rem;
 }
