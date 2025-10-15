@@ -9,6 +9,7 @@ import { Cycles } from './components/Cycles';
 import { DefaultInput } from './components/DefaultInput';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
+import { Footer } from './components/Footer';
 
 export function App() {
   console.log('TSX OK');
@@ -43,10 +44,13 @@ export function App() {
           </div>
 
           <div>
-            <DefaultButton icon={<PlayCircleIcon />} color='green' />
-            <DefaultButton icon={<PlayCircleIcon />} color='red' />
+            <DefaultButton icon={<PlayCircleIcon />} />
           </div>
         </form>
+      </Container>
+
+      <Container>
+        <Footer> Entenda a tecnica do Pomodoro. </Footer>
       </Container>
     </>
   );

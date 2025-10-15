@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footerLink {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.2s ease-in-out;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  text-decoration: underline;
+}
