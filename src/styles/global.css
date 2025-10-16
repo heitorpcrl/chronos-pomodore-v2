@@ -36,7 +36,6 @@ body {
   gap: 2.4rem;
 }
 
-/* Camadas decorativas: fitas girando (estilo PS4) */
 body::before,
 body::after {
   content: '';
@@ -49,7 +48,6 @@ body::after {
   transform-origin: 50% 50%;
 }
 
-/* Primeira fita: roxa (brand) com arco mais estreito */
 body::before {
   background: conic-gradient(
       from 0deg at 30% 55%,
@@ -75,7 +73,6 @@ body::before {
   animation: spin1 46s linear infinite;
 }
 
-/* Segunda fita: ciano (accent) com arco mais largo e fase diferente */
 body::after {
   background: conic-gradient(
       from 120deg at 65% 60%,
