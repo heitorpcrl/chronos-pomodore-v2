@@ -13,13 +13,18 @@
   text-decoration: none;
   color: var(--secondary);
   background: linear-gradient(
-    to right,
-    rgba(42, 42, 42, 0.6),
-    rgba(206, 206, 206, 0.6)
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
   );
-  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-normal), background var(--transition-normal),
+    border-color var(--transition-normal);
   padding: 1.2rem;
-  border-radius: 0.8rem;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-sm);
 }
 
 .menulink svg {
@@ -30,20 +35,20 @@
 
 /* Glow base discreto nos ícones */
 .menulink svg {
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.25));
+  filter: drop-shadow(0 2px 10px rgba(124, 58, 237, 0.25));
 }
 
 /* Intensifica o brilho e dá leve movimento no hover/focus */
 .menulink:hover svg,
 .menulink:focus-visible svg {
-  transform: translateY(-2px) scale(1.06);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6))
-    drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+  transform: translateY(-1px) scale(1.04);
+  filter: drop-shadow(0 2px 14px rgba(124, 58, 237, 0.45));
 }
 
 /* Halo no container para reforçar o efeito */
 .menulink:hover,
 .menulink:focus-visible {
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.25),
-    inset 0 0 8px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), 0 0 0 2px rgba(124, 58, 237, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
 }

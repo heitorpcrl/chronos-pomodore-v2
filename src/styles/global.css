@@ -3,23 +3,29 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-sans);
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(4, 4, 4, 0.6)),
-    url('../images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-size: 1.6rem;
+  background: radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(124, 58, 237, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      1000px 500px at 90% 20%,
+      rgba(34, 211, 238, 0.12),
+      transparent
+    ),
+    var(--bg);
   color: var(--secondary);
   border-radius: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .form {
@@ -28,4 +34,101 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+
+/* Camadas decorativas: fitas girando (estilo PS4) */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -40%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(28px) saturate(140%);
+  opacity: 0.85;
+  transform-origin: 50% 50%;
+}
+
+/* Primeira fita: roxa (brand) com arco mais estreito */
+body::before {
+  background: conic-gradient(
+      from 0deg at 30% 55%,
+      rgba(124, 58, 237, 0.5) 0 70deg,
+      transparent 70deg 360deg
+    ),
+    conic-gradient(
+      from 210deg at 75% 45%,
+      rgba(124, 58, 237, 0.34) 0 50deg,
+      transparent 50deg 360deg
+    );
+  -webkit-mask-image: radial-gradient(
+    65% 65% at 50% 50%,
+    rgba(0, 0, 0, 0.9),
+    transparent 80%
+  );
+  mask-image: radial-gradient(
+    65% 65% at 50% 50%,
+    rgba(0, 0, 0, 0.9),
+    transparent 80%
+  );
+  box-shadow: 0 0 120px rgba(124, 58, 237, 0.25);
+  animation: spin1 46s linear infinite;
+}
+
+/* Segunda fita: ciano (accent) com arco mais largo e fase diferente */
+body::after {
+  background: conic-gradient(
+      from 120deg at 65% 60%,
+      rgba(34, 211, 238, 0.42) 0 80deg,
+      transparent 80deg 360deg
+    ),
+    conic-gradient(
+      from 300deg at 40% 40%,
+      rgba(34, 211, 238, 0.28) 0 50deg,
+      transparent 50deg 360deg
+    );
+  -webkit-mask-image: radial-gradient(
+    70% 70% at 50% 50%,
+    rgba(0, 0, 0, 0.85),
+    transparent 85%
+  );
+  mask-image: radial-gradient(
+    70% 70% at 50% 50%,
+    rgba(0, 0, 0, 0.85),
+    transparent 85%
+  );
+  box-shadow: 0 0 140px rgba(34, 211, 238, 0.22);
+  animation: spin2 60s linear infinite;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg) scale(1.02);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1.06);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.02);
+  }
+}
+
+/* Respeita redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
 }
