@@ -1,7 +1,7 @@
 .container {
-  font-size: clamp(8rem, 30vw, 14rem);
-  font-weight: bold;
+  font-size: clamp(8rem, 26vw, 14rem);
+  font-weight: 800;
   text-align: center;
-  line-height: 1.3;
-  font-style: normal;
+  color: #f3f4f6;
+  text-shadow: 0 2px 24px rgba(124, 58, 237, 0.38);
 }
