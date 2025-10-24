@@ -76,8 +76,3 @@ npm run preview
 
 Sinta-se à vontade para abrir issues e enviar PRs com melhorias, correções ou
 novas ideias de UI/UX que melhorem a experiência de estudo.
-
-### Licença
-
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE (se
-houver) para mais detalhes.
