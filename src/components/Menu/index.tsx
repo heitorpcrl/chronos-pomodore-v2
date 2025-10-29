@@ -12,8 +12,6 @@ export function Menu() {
   ) {
     event.preventDefault(); //nao vai seguir o link
 
-    console.log('Clicado', Date.now());
-
     setTheme(prevTheme => {
       const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
       return nextTheme;
@@ -23,10 +21,6 @@ export function Menu() {
   useEffect(() => {
     console.log('o tema mudou para', theme, Date.now());
     document.documentElement.setAttribute('date-theme', theme);
-
-    return () => {
-      console.log('Olha, este componente será atualizado.');
-    };
   }, [theme]); //executa apenas quando o valor de theme muda
 
   return (
