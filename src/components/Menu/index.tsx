@@ -5,7 +5,10 @@ import React, { useEffect, useState } from 'react';
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
-  const [theme, setTheme] = useState<AvailableThemes>('dark');
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const storageTheme = localStorage.getItem('item') as AvailableThemes;
+    return storageTheme;
+  });
 
   function handleThemeChange(
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -21,6 +24,7 @@ export function Menu() {
   useEffect(() => {
     console.log('o tema mudou para', theme, Date.now());
     document.documentElement.setAttribute('date-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]); //executa apenas quando o valor de theme muda
 
   return (
