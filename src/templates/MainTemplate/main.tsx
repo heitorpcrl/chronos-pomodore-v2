@@ -8,8 +8,11 @@ import { CountDown } from './components/CountDown';
 import { Footer } from './components/Footer';
 import { MainForm } from './components/MainForm';
 
-export function App() {
-  console.log('TSX OK');
+type MainTemplateProps = {
+  children: React.ReactNode;
+};
+
+export function MainTemplate({ children }: MainTemplateProps) {
   return (
     <>
       <Container>
@@ -22,13 +25,7 @@ export function App() {
         <Menu />
       </Container>
 
-      <Container>
-        <CountDown />
-      </Container>
-
-      <Container>
-        <MainForm />
-      </Container>
+      {children}
 
       <Container>
         <Footer> Entenda a tecnica do Pomodoro. </Footer>
