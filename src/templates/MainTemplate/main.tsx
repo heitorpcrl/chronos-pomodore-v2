@@ -1,12 +1,10 @@
 import './styles/theme.css';
 import './styles/global.css';
-import { Heading } from './components/Heading';
-import { Container } from './components/Container';
-import { Logo } from './components/Logo';
-import { Menu } from './components/Menu';
-import { CountDown } from './components/CountDown';
-import { Footer } from './components/Footer';
-import { MainForm } from './components/MainForm';
+import { Container } from '../../components/Container';
+import { Heading } from '../../components/Heading';
+import { Logo } from '../../components/Logo';
+import { Menu } from '../../components/Menu';
+import { Footer } from '../../components/Footer';
 
 type MainTemplateProps = {
   children: React.ReactNode;
