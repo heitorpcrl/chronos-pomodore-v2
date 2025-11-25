@@ -1,14 +1,10 @@
 import styles from './styles.module.css';
 
-type Footerprops = {
-  children: React.ReactNode;
-};
-
-export function Footer({ children }: Footerprops) {
+export function Footer() {
   return (
     <footer className={styles.Footer}>
       <a href='#' className={styles.footerLink}>
-        {children}
+        Entenda a tecnica do Pomodoro.
       </a>
     </footer>
   );
